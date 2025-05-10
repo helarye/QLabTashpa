@@ -42,6 +42,18 @@ namespace QLab
         {
             return this.first == null;
         }
+        public int GetQLength()
+        {//בפונקציה זו נחשב את אורך התור
+         //מותר להשתמש בה, רק כאשר האפשרות צויינה בשאלה
+            int count = 0;
+            Node<T> current = this.first;
+            while (current != null)
+            {
+                count++;
+                current = current.GetNext();
+            }
+            return count;
+        }
 
         public override string ToString()
         {
